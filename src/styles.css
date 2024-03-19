@@ -1,0 +1,259 @@
+* {
+   font-family: 'Nunito', sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   outline: none;
+   border: none;
+   text-decoration: none;
+   transition: all .2s linear;
+   text-transform: capitalize;
+}
+
+html {
+   font-size: 62.5%;
+   overflow-x: hidden;
+}
+
+body {
+   background-color: #0156a4;
+   /* Mavi arka plan */
+   overflow: hidden;
+   /* Balıkların ekran dışına çıkmasını engeller */
+}
+
+
+.kapsayici {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 3rem 2rem;
+}
+
+.kapsayici .logo {
+   text-align: center;
+   margin-bottom: 3rem;
+}
+
+.kapsayici .logo img {
+   max-width: 45rem;
+   width: 50rem;
+   /* Ölçüleri uygun olarak ayarlayın */
+}
+
+.kapsayici .title {
+   display: none;
+   /* Başlığı gizle */
+}
+
+.kapsayici .insan-kapsayici {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+   gap: 2rem;
+}
+
+.kapsayici .insan-kapsayici .kisi {
+   text-align: center;
+   padding: 3rem 2rem;
+   background: #0156a4;
+   /* Koyu mavi tonu */
+   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+   outline: .1rem solid #ffffff;
+   /* Mavi tonunda sınır */
+   outline-offset: -1.5rem;
+   cursor: pointer;
+   border-radius: 50px;
+}
+
+.kapsayici .insan-kapsayici .kisi:hover {
+   outline: .2rem solid #1e88e5;
+   /* Daha açık mavi tonunda sınır */
+   outline-offset: 0;
+}
+
+.kapsayici .insan-kapsayici .kisi img {
+   height: 25rem;
+}
+
+.kapsayici .insan-kapsayici .kisi:hover img {
+   transform: scale(.9);
+}
+
+.kapsayici .insan-kapsayici .kisi h3 {
+   padding: .5rem 0;
+   font-size: 2rem;
+   color: #fff;
+}
+
+.kapsayici .insan-kapsayici .kisi:hover h3 {
+   color: #1e88e5;
+   /* Daha açık mavi tonu */
+}
+
+.kapsayici .insan-kapsayici .kisi .adi {
+   font-size: 2rem;
+   color: #fff;
+}
+
+.kapsayici-gorunumu {
+   position: fixed;
+   top: 0;
+   left: 0;
+   min-height: 100vh;
+   width: 100%;
+   background: rgba(0, 0, 0, .8);
+   display: none;
+   align-items: center;
+   justify-content: center;
+   border-radius: 0%;
+}
+
+.kapsayici-gorunumu .gorunumu {
+   display: none;
+   padding: 2rem;
+   text-align: center;
+   background: #22598a;
+   /* Koyu mavi tonu */
+   position: relative;
+   margin: 2rem;
+   width: 50rem;
+   min-height: 50rem;
+   border-radius: 30px;
+}
+
+.kapsayici-gorunumu .gorunumu.active {
+   display: inline-block;
+}
+
+.kapsayici-gorunumu .gorunumu img {
+   min-height: auto;
+   width: 99%;
+}
+
+.kapsayici-gorunumu .gorunumu .fa-times {
+   position: absolute;
+   top: 1rem;
+   right: 1.5rem;
+   cursor: pointer;
+   color: #eee;
+   font-size: 4rem;
+}
+
+.kapsayici-gorunumu .gorunumu .fa-times:hover {
+   transform: rotate(90deg);
+}
+
+.kapsayici-gorunumu .gorunumu h3 {
+   color: #eee;
+   padding: .5rem 0;
+   font-size: 2.5rem;
+}
+
+.kapsayici-gorunumu .gorunumu .adi2 {
+   padding: 1rem 0;
+   font-size: 1.7rem;
+}
+
+.kapsayici-gorunumu .gorunumu .adi2 i {
+   color: #1e88e5;
+   /* Daha açık mavi tonu */
+}
+
+.kapsayici-gorunumu .gorunumu .adi2 span {
+   color: #999;
+}
+
+.kapsayici-gorunumu .gorunumu p {
+   line-height: 1.5;
+   padding: 1rem 0;
+   font-size: 1.6rem;
+   color: #ccc;
+}
+
+.kapsayici-gorunumu .gorunumu .adi {
+   padding: 1rem 0;
+   font-size: 2.5rem;
+   color: #1e88e5;
+   /* Daha açık mavi tonu */
+}
+
+.kapsayici-gorunumu .gorunumu.buttons {
+   display: flex;
+   gap: 1.5rem;
+   flex-wrap: wrap;
+   margin-top: 1rem;
+}
+
+.kapsayici-gorunumu .gorunumu .buttons a {
+   flex: 1 1 16rem;
+   padding: 1rem;
+   font-size: 1.8rem;
+   color: #eee;
+   border: .1rem solid #eee;
+}
+
+.kapsayici-gorunumu .gorunumu .buttons a.cart {
+   background: #eee;
+   color: #444;
+}
+
+.kapsayici-gorunumu .gorunumu .buttons a.cart:hover {
+   background: #ccc;
+   color: #fff;
+}
+
+.kapsayici-gorunumu .gorunumu .buttons a.buy:hover {
+   background: #eee;
+   color: #444;
+}
+
+@media (max-width: 991px) {
+   html {
+      font-size: 55%;
+   }
+}
+
+@media (max-width: 768px) {
+   .kapsayici-gorunumu .gorunumu img {
+      height: 25rem;
+   }
+}
+
+@media (max-width: 450px) {
+   html {
+      font-size: 50%;
+   }
+}
+
+.dalga {
+   width: 100%;
+   display: block;
+   margin-top: 20px;
+   /* İhtiyaca göre ayarlayabilirsiniz */
+}
+
+.kapat {
+   position: absolute;
+   top: 1,4em;
+   right: 2rem;
+   font-size: 5rem; /* Daha büyük bir kapatma tuşu için */
+   cursor: pointer;
+   color: rgb(255, 0, 0);
+ }
+
+ /* Atatürk kutucuğu için özel stil */
+.ataturk-tema {
+   background-color: #000000; /* Örnek arka plan rengi */
+   color: #000; /* Örnek yazı rengi */
+   /* Diğer özel stiller */
+ }
+ .gorunumu .pencere-icerigi {
+   max-height: 50rem; /* Kutucuğun maksimum yüksekliğini ayarlayın */
+   overflow: auto; /* Kaydırma çubuğunu etkinleştirin */
+   -webkit-overflow-scrolling: touch; /* iOS'ta dokunmatik kaydırma için */
+ }
+
+ .pencere-icerigi img {
+   max-width: 100%; /* Konteynerin genişliğine göre maksimum genişlik */
+   max-height: 100%; /* Konteynerin yüksekliğine göre maksimum yükseklik */
+   object-fit: contain; /* Resmi oranını koruyarak sığdır */
+ }
